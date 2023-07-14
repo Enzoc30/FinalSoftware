@@ -39,5 +39,3 @@ class BilleteraTestCase(unittest.TestCase):
         self.assertNotEqual(data['body'], "Realizado en 13/07/2023")
 
 
-if __name__ == '__main__':
-    unittest.main()

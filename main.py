@@ -51,7 +51,7 @@ def billetera_contactos():
         return jsonify({
             "success" : "true",
             "status": 404,
-            "body": "Cuenta no encontrada"
+            "body": "Not Found"
         })
     
     cuenta = get_cuenta(numero_cuenta)
@@ -59,7 +59,7 @@ def billetera_contactos():
         return jsonify({
             "success" : "true",
             "status": 404,
-            "body": "Cuenta no encontrada"
+            "body": "Not Found"
         })
 
     contactos = get_contacts(cuenta)
@@ -85,14 +85,14 @@ def billetera_pagar():
         return jsonify(
             {
               "status": 404,
-              "body": "Usuario no encontrado"
+              "body": "User Not Found"
             }
         )
     if destino not in usuario1.contacts:
         return jsonify(
             {
               "status": 400,
-              "body": "No es contacto"
+              "body": "Not Contact"
             }
         )
 
@@ -114,7 +114,7 @@ def billetera_historial():
         return jsonify(
             {
             "status": 404,
-            "body": "Usuario no encontrado"
+            "body": "Usuario Not Found"
             }
         )
     
